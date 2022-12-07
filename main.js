@@ -4,6 +4,9 @@ const $$ = document.querySelectorAll.bind(document);
 const viewMoreBtn = $(".show-all-products");
 const plantBD = "http://localhost:3000/plant";
 const featureProductList = $(".product-container");
+const plantBtn = $("#plants");
+const solidBtn = $("#solid");
+const potsBtn = $("#pots");
 
 const webApp = {
   productList: [],
@@ -27,12 +30,7 @@ const webApp = {
         featureProductList.innerHTML = featureHTML.join(name);
       });
   },
-  viewProductsPage: function () {
-    viewMoreBtn.onclick = () => {
-      console.log("clicked");
-      location.replace("products_list/our_product.html");
-    };
-  },
+  viewProductsPage: function () {},
   viewProduct: function (HTMLelement) {
     console.log("view product" + HTMLelement.classList);
     const productInfor = document.createElement("div");
@@ -69,6 +67,12 @@ const webApp = {
     //     console.log("product viewed");
     //   };
     // });
+    // viewMoreBtn.onclick = () => {
+    //   location.replace("products_list/our_product.html");
+    // };
+    // plantBtn.onclick = () => {
+    //   location.replace("products_list/our_product.html");
+    // };
   },
   start: function () {
     this.render();
