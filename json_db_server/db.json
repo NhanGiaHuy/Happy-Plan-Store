@@ -1,0 +1,67 @@
+{
+  "plant": [
+    {
+      "id": "1",
+      "name": "Binh Voi",
+      "price": "20",
+      "url": "./src/binh voi.jpg",
+      "sale": "0",
+      "feature": 1,
+      "description": "Cây bình vôi là một loại cây thân là dây leo có màu xanh và thân leo khá cao. Thông thường thân cây có chiều dài 6m. Thân cây nhẵn và có xu hướng hơi xoắn. lá cây thì mọc xen kẽ. Những vị trí không có lá hay lá bị rụng sẽ xuất hiện hoa."
+    },
+    {
+      "id": "2",
+      "name": "Hoa Sen",
+      "price": "25",
+      "url": "./src/Bong Sen.jpg",
+      "sale": "0",
+      "feature": 1,
+      "description": "Hoa sen là cây thực vật thủy sinh và có tên khoa học là Nelumbo nucifera, thuộc họ Nelumbonaceae. Trong tiếng Anh, hoa sen được gọi là lotus và trong tiếng Việt, hoa sen cũng được gọi với cái tên khác là liên hoa."
+    },
+    {
+      "id": "3",
+      "name": "Bon Sai",
+      "price": "50",
+      "url": "./src/bonsai-1.jpg",
+      "sale": "0",
+      "feature": 1,
+      "description": "Cây bonsai hay còn gọi là cây cảnh dùng để trưng bày trong nhà hoặc ngoài sân đều được. Ý nghĩa của thú chơi cây cảnh bonsai sâu xa là dùng hình ảnh sức sống mạnh mẽ của cây mà động viên cho mỗi người phải kiên trì có quyết tâm trong cuộc sống. Rèn cho ta đức tính kiên nhẫn, cẩn thận và khéo léo trong xử lý công việc."
+    },
+    {
+      "id": "4",
+      "name": "Luoi Ho",
+      "price": "15",
+      "url": "./src/luoi ho.jpg",
+      "sale": "0",
+      "feature": 0,
+      "description": "Với tên gọi khác cây lưỡi hổ còn được gọi là cây lưỡi cọp và vĩ hổ, tên khoa học của nó Sansevieria trifasciata, thuộc họ Măng tây, có chiều cao từ 50 đến 60cm. Thân hình cây dạng dẹt, mọng nước, nhìn hơi sắc nhọn nguy hiểm nhưng thân lại rất mềm, không làm đứt tay khi ta chạm vào."
+    },
+    {
+      "id": "5",
+      "name": "Buom",
+      "price": "25",
+      "url": "./src/Buom.jpg",
+      "sale": "0",
+      "feature": 1,
+      "description": "Bướm Đêm có tên tiếng anh là Red Butterfly Wing, tên khoa học là Christia Species. Cây thuộc họ Fabaceae. Bướm đêm còn được gọi với cái tên cây chua me đất lá tím. Cây biết đến là loài cây hoa cảnh nổi tiếng ở Brazil"
+    },
+    {
+      "id": "6",
+      "name": "Cay Bac Ha",
+      "price": "15",
+      "url": "./src/cay bac ha.jpg",
+      "sale": "0",
+      "feature": 0,
+      "description": "Bạc hà là một loại cây thân thảo, cao khoảng 60-80cm, có tên khoa học là Mentha Arvensis, tên tiếng Anh là mint. Cây bạc hà thân hình vuông, màu xanh hoặc tím nhạt.Bạc hà có vị cay, mát và có chứa tinh dầu Menthol, thường được ứng dụng làm hương trong thực phẩm. Trong bạc hà chứa rất nhiều tinh dầu, hầu hết là menthol và menthone. Mỗi loại bạc hà sẽ có mỗi hoạt chất cay khác nhau."
+    },
+    {
+      "id": "7",
+      "name": "Cay Dinh Huong",
+      "price": "20",
+      "url": "./src/dinh huong.jpg",
+      "sale": "0",
+      "feature": 0,
+      "description": "Đinh hương là một loài thực vật trong họ Đào kim nương có các chồi hoa khi phơi khô có mùi thơm, có nguồn gốc từ Indonesia và được sử dụng như một loại gia vị trong hầu hết nền văn hóa ẩm thực. Tên gọi 'đinh hương' có lẽ là do hình dáng của chồi hoa giống với chữ Đinh viết bằng chữ Hán"
+    }
+  ]
+}

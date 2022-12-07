@@ -1,0 +1,40 @@
+/*style for view our product page*/
+.product-section {
+  display: grid;
+  grid-template-columns: 20% 80%;
+
+  padding: 2rem 0 2rem 0;
+}
+
+.filter {
+  padding: 0 1rem 0 1rem;
+}
+
+.category-filter li {
+  display: block;
+  list-style-type: none;
+  margin: 1rem 0 1rem 0;
+}
+
+.category-filter li a {
+  text-decoration: none;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.product {
+  height: 35rem;
+  width: 20rem;
+}
+
+.product img {
+  height: 25rem;
+  width: 100%;
+}
+
+.product h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
