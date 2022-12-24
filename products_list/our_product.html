@@ -4,10 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product_list_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Our Products</title>
   </head>
   <body>
+    <header class="header">
+      <div class="menu-container">
+        <div class="logo">
+          <a href="http://127.0.0.1:5500/Happy%20Plan%20Store/index.html"
+            ><h3 class="logo">HP</h3></a
+          >
+        </div>
+        <div class="menu-bar">
+          <ul>
+            <li>
+              <a
+                href="http://127.0.0.1:5500/Happy%20Plan%20Store/index.html"
+                id="home"
+                >Home</a
+              >
+            </li>
+            <li class="dropdown-menu">
+              <a href="#" id="products">Products</a>
+              <div class="sub-menu">
+                <a href="#" id="plants">Plants</a>
+                <a href="" id="solid">Solid</a>
+                <a href="" id="pots">Pots</a>
+              </div>
+            </li>
+            <li><a href="#" id="about">About</a></li>
+            <li><a href="#" id="contact">Contact</a></li>
+            <li>
+              <button class="cart">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="number-of-items">4</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <div class="product-section">
       <div class="filter">
         <input id="text-filter" type="text" />

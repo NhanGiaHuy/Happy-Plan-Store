@@ -63,5 +63,37 @@
       "feature": 0,
       "description": "Đinh hương là một loài thực vật trong họ Đào kim nương có các chồi hoa khi phơi khô có mùi thơm, có nguồn gốc từ Indonesia và được sử dụng như một loại gia vị trong hầu hết nền văn hóa ẩm thực. Tên gọi 'đinh hương' có lẽ là do hình dáng của chồi hoa giống với chữ Đinh viết bằng chữ Hán"
     }
+  ],
+  "cart": [
+    {
+      "name": "Hoa Sen",
+      "price": "25",
+      "size": "medium",
+      "id": 1
+    },
+    {
+      "name": "Bon Sai",
+      "price": "50",
+      "size": "medium",
+      "id": 2
+    },
+    {
+      "name": "Binh Voi",
+      "price": "20",
+      "size": "medium",
+      "id": 3
+    },
+    {
+      "name": "Buom",
+      "price": "25",
+      "size": "medium",
+      "id": 4
+    },
+    {
+      "name": "Bon Sai",
+      "price": "50",
+      "size": "medium",
+      "id": 5
+    }
   ]
 }

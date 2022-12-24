@@ -2,17 +2,19 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const viewMoreBtn = $(".show-all-products");
-const plantBD = "http://localhost:3000/plant";
+const plantDB = "http://localhost:3000/plant";
+const cartDB = "http://localhost:3000/cart";
 const featureProductList = $(".product-container");
 const plantBtn = $("#plants");
 const solidBtn = $("#solid");
 const potsBtn = $("#pots");
+const cart_items = $(".number-of-items");
 
 const webApp = {
   productList: [],
   render: function () {
     let featureHTML;
-    fetch(plantBD)
+    fetch(plantDB)
       .then((response) => {
         return response.json();
       })
@@ -27,12 +29,19 @@ const webApp = {
           </div>`;
           }
         });
-        featureProductList.innerHTML = featureHTML.join(name);
+        featureProductList.innerHTML = featureHTML.join("");
+      });
+
+    fetch(cartDB)
+      .then((response) => {
+        return response.json();
+      })
+      .then((items) => {
+        cart_items.innerText = items.length;
       });
   },
   viewProductsPage: function () {},
   viewProduct: function (HTMLelement) {
-    console.log("view product" + HTMLelement.classList);
     const productInfor = document.createElement("div");
     productInfor.classList.add("info-section");
     this.productList.forEach((product) => {
@@ -44,12 +53,12 @@ const webApp = {
             <h2 class="name">${product.name}</h2>
             <h3 class="price">${product.price}$</h3>
             <div class="size">
-              <div>Small</div>
-              <div>Medium</div>
-              <div>Large</div>
+              <div onclick="webApp.selectSize(this)">Small</div>
+              <div onclick="webApp.selectSize(this)">Medium</div>
+              <div onclick="webApp.selectSize(this)">Large</div>
             </div>
             <p class="description">${product.description}</p>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="webApp.addtoCart({name: '${product.name}', price:'${product.price}',size:'medium'})">Add to Cart</button>
           </div>
           </div>`;
       }
@@ -59,25 +68,34 @@ const webApp = {
       document.body.removeChild(productInfor);
     };
   },
-  behaviorHandle: function () {
-    // const featureProducts = $$(".product");
-    // console.log(featureProducts);
-    // featureProducts.forEach((product) => {
-    //   product.onclick = () => {
-    //     console.log("product viewed");
-    //   };
-    // });
-    // viewMoreBtn.onclick = () => {
-    //   location.replace("products_list/our_product.html");
-    // };
-    // plantBtn.onclick = () => {
-    //   location.replace("products_list/our_product.html");
-    // };
+  selectSize: function (sizeElement) {
+    if ($(".size div.selected") != null) {
+      $(".size div.selected").classList.remove("selected");
+    }
+    sizeElement.classList.add("selected");
   },
+  addtoCart: function (data) {
+    fetch(cartDB, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(data),
+    });
+
+    fetch(cartDB)
+      .then((response) => {
+        return response.json();
+      })
+      .then((items) => {
+        cart_items.innerText = items.length;
+      });
+  },
+  checkoutCart: function () {},
   start: function () {
     this.render();
     this.viewProductsPage();
-    this.behaviorHandle();
   },
 };
 
