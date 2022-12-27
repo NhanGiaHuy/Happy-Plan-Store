@@ -9,6 +9,7 @@ const plantBtn = $("#plants");
 const solidBtn = $("#solid");
 const potsBtn = $("#pots");
 const cart_items = $(".number-of-items");
+const cart_btn = $(".cart");
 
 const webApp = {
   productList: [],
@@ -92,10 +93,23 @@ const webApp = {
         cart_items.innerText = items.length;
       });
   },
-  checkoutCart: function () {},
+  checkoutCart: function () {
+    cart_btn.onclick = () => {
+      fetch(cartDB)
+        .then((response) => {
+          return response.json();
+        })
+        .then((items) => {
+          items.map((item, index) => {
+            console.log("tao page add to cart");
+          });
+        });
+    };
+  },
   start: function () {
     this.render();
     this.viewProductsPage();
+    this.checkoutCart();
   },
 };
 

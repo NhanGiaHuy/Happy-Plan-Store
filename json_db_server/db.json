@@ -66,34 +66,16 @@
   ],
   "cart": [
     {
-      "name": "Hoa Sen",
-      "price": "25",
-      "size": "medium",
-      "id": 1
-    },
-    {
       "name": "Bon Sai",
       "price": "50",
       "size": "medium",
-      "id": 2
-    },
-    {
-      "name": "Binh Voi",
-      "price": "20",
-      "size": "medium",
-      "id": 3
+      "id": 1
     },
     {
       "name": "Buom",
       "price": "25",
       "size": "medium",
-      "id": 4
-    },
-    {
-      "name": "Bon Sai",
-      "price": "50",
-      "size": "medium",
-      "id": 5
+      "id": 2
     }
   ]
 }

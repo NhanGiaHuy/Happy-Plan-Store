@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+main div {
+  display: grid;
+  grid-template-columns: 20% 25% 25% 10% 10% 10%;
+}
