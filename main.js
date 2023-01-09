@@ -94,22 +94,23 @@ const webApp = {
       });
   },
   checkoutCart: function () {
-    cart_btn.onclick = () => {
-      fetch(cartDB)
-        .then((response) => {
-          return response.json();
-        })
-        .then((items) => {
-          items.map((item, index) => {
-            console.log("tao page add to cart");
-          });
-        });
-    };
+    window.location.href =
+      "http://127.0.0.1:5500/Happy%20Plan%20Store/checkout/checkout.html";
+    // cart_btn.onclick = () => {
+    //   fetch(cartDB)
+    //     .then((response) => {
+    //       return response.json();
+    //     })
+    //     .then((items) => {
+    //       items.map((item, index) => {
+    //         console.log("tao page add to cart");
+    //       });
+    //     });
+    // };
   },
   start: function () {
     this.render();
     this.viewProductsPage();
-    this.checkoutCart();
   },
 };
 

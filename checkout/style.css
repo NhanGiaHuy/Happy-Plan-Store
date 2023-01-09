@@ -8,7 +8,12 @@ main {
   grid-template-rows: auto;
 }
 
-main div {
+main div.lable {
+  display: grid;
+  grid-template-columns: 20% 25% 25% 10% 10% 10%;
+}
+
+main div.row {
   display: grid;
   grid-template-columns: 20% 25% 25% 10% 10% 10%;
 }

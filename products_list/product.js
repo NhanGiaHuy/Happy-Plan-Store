@@ -3,9 +3,11 @@ const $$ = document.querySelectorAll.bind(document);
 
 const productListDisplay = $(".product-container");
 const plantDB = "http://localhost:3000/plant";
+const cartDB = "http://localhost:3000/cart";
 
 const product_item = {
   productList: [],
+  cartList: [],
   render: function () {
     fetch(plantDB)
       .then((response) => {
@@ -40,9 +42,7 @@ const product_item = {
               <div onclick="product_item.selectSize(this)">Large</div>
             </div>
             <p class="description">${product.description}</p>
-            <button class="add-to-cart" onclick="addtoCart(${product.name}, ${
-          product.price
-        }, ${$(".size div.selected").innerText})">Add to Cart</button>
+            <button class="add-to-cart" onclick="product_item.addtoCart({name: '${product.name}', price:'${product.price}',size:'medium'})">Add to Cart</button>
           </div>
           </div>`;
       }
@@ -57,6 +57,24 @@ const product_item = {
       $(".size div.selected").classList.remove("selected");
     }
     sizeElement.classList.add("selected");
+  },
+  addtoCart: function (data) {
+    fetch(cartDB, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(data),
+    });
+
+    fetch(cartDB)
+      .then((response) => {
+        return response.json();
+      })
+      .then((items) => {
+        cart_items.innerText = items.length;
+      });
   },
   start: function () {
     this.render();
