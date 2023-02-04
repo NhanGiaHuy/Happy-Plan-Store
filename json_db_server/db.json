@@ -91,6 +91,18 @@
       "price": "20",
       "size": "medium",
       "id": 4
+    },
+    {
+      "name": "Binh Voi",
+      "price": "20",
+      "size": "medium",
+      "id": 5
+    },
+    {
+      "name": "Buom",
+      "price": "25",
+      "size": "medium",
+      "id": 6
     }
   ]
 }

@@ -4,6 +4,8 @@ const $$ = document.querySelectorAll.bind(document);
 const plantDB = "http://localhost:3000/plant";
 const cartDB = "http://localhost:3000/cart";
 
+const checkoutBtn = $(".check-out");
+
 const itemsList = $(".rows");
 
 const checkoutPage = {
@@ -25,15 +27,20 @@ const checkoutPage = {
         <h3>25$</h3>
       </div>`;
         });
-        console.log(cartHTML);
         itemsList.innerHTML = cartHTML.join("");
       });
   },
   deleteItem: function () {},
   increaseQuantity: function () {},
   decreaseQuantity: function () {},
+  checkout: function () {
+    checkoutBtn.onclick = () => {
+      console.log("direct to page payment");
+    };
+  },
   start: function () {
     this.render();
+    this.checkout();
   },
 };
 
